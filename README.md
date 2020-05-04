@@ -10,16 +10,17 @@
 * **a)   Identify the most important nodes, based on their relationships** 
 Using the page rank algorithm from gds shown below, you'll recieve the following ranks:
 
-**name**	      **score**
-"Sunnyvale"	1.4627125821076332
-"Milpitas"	1.1650443203281606
-"Fremont"	1.0598599660210313
-"Athetron"	0.989260438363999
-"Palo Alto"	0.9270565305138007
-"Mountain View"	0.8505048173945399
-"Cupertino"	0.8188349188305439
-"Santa Clara"	0.8188349180389197
-"San Jose"	0.6113811442395671
+|Name |Score|
+|---|---|
+|"Sunnyvale"|	1.4627125821076332|
+|"Milpitas"|	1.1650443203281606|
+|"Fremont"|	1.0598599660210313|
+|"Athetron"|	0.989260438363999|
+|"Palo Alto"|	0.9270565305138007|
+|"Mountain View"|	0.8505048173945399|
+|"Cupertino"|	0.8188349188305439|
+|"Santa Clara"|	0.8188349180389197|
+|"San Jose"|	0.6113811442395671|
 
 ```cql
 CALL gds.pageRank.stream('Graph', { maxIterations: 20, dampingFactor: 0.85 })
@@ -36,8 +37,8 @@ RETURN gds.util.asNode(nodeId).name AS name, communityId
 ORDER BY communityId ASC
 ```
 
-|Name|communityId|
-|--------------|----|
+|Name|CommunityId|
+|---|---|
 |"Mountain View"|	1|
 |"Palo Alto"|	1|
 |"Athetron"|	1|
