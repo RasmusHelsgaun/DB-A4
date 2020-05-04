@@ -9,10 +9,11 @@
 [Link to dataset](https://neo4j.com/graphgist/learning-cypher-with-san-francisco-bay-map/)
 
 * **a)   Identify the most important nodes, based on their relationships** 
-```cypher
-MATCH (a)-->(b)
-RETURN b, COLLECT(a) as relationships
-ORDER BY SIZE(relationships) DESC LIMIT 10
+```cql
+CALL gds.pageRank.stream('Graph', { maxIterations: 20, dampingFactor: 0.85 })
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).name AS name, score
+ORDER BY score DESC, name ASC
 ```
 
 * **b)   Detect the close connected communities of nodes** 
