@@ -1,9 +1,9 @@
 # DB-A4
 
 ## Group:
-* Nille Løgrup
-* Ada-mmm Lassie
-* Ralle H8gaun
+* Pernille Lørup
+* Adam Lass
+* Rasmus Helsgaun
 
 ### Dataset used can be found: [here](https://neo4j.com/graphgist/learning-cypher-with-san-francisco-bay-map/)
 
