@@ -9,6 +9,8 @@
 Neo4j version: **3.5.17**
 Plugins: **APOC** & **Graph Data Science Library**
 
+_______
+
 * **a)   Identify the most important nodes, based on their relationships**  
 ```cql
 CALL gds.pageRank.stream('Graph', { maxIterations: 20, dampingFactor: 0.85 })
