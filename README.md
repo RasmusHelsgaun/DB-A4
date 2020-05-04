@@ -5,7 +5,7 @@
 * Ada-mmm Lassie
 * Ralle H8gaun
 
-### Dataset used: [Link to dataset](https://neo4j.com/graphgist/learning-cypher-with-san-francisco-bay-map/)
+### Dataset used can be found: [here](https://neo4j.com/graphgist/learning-cypher-with-san-francisco-bay-map/)
 
 * **a)   Identify the most important nodes, based on their relationships**  
 ```cql
