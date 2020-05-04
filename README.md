@@ -93,10 +93,6 @@ ORDER BY similarity DESCENDING, city1, city2
 |"Sunnyvale"|	"Santa Clara"|	0.16666666666666666|
 
 * **d)   Find available routes or optimal paths between the nodes** 
-From "Sunnyvale" to "San Jose" you will have to go through the Node / City "Cupertino".
-To see this path, run the query below.
-Can also use other city names like "San Jose" and "Mountain View", which will take you through "Milpitas" and "Sunnyvale".
-
 ```cql
 MATCH (start:City {name: 'Sunnyvale'}), (end:City {name: 'San Jose'})
 CALL gds.alpha.shortestPath.stream({
@@ -107,6 +103,10 @@ CALL gds.alpha.shortestPath.stream({
 YIELD nodeId, cost
 RETURN gds.util.asNode(nodeId).name AS name, cost
 ```
+
+From "Sunnyvale" to "San Jose" you will have to go through the Node / City "Cupertino".
+To see this path, run the query below.
+Can also use other city names like "San Jose" and "Mountain View", which will take you through "Milpitas" and "Sunnyvale".
 
 |Name|	Cost|
 |---|---|
