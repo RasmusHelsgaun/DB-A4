@@ -6,6 +6,8 @@
 * Rasmus Helsgaun
 
 ### Dataset used can be found: [here](https://neo4j.com/graphgist/learning-cypher-with-san-francisco-bay-map/)
+Neo4j version: **3.5.17**
+Plugins: **APOC** & **Graph Data Science Library**
 
 * **a)   Identify the most important nodes, based on their relationships**  
 ```cql
