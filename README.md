@@ -114,6 +114,17 @@ Can also use other city names like "San Jose" and "Mountain View", which will ta
 |"Cupertino"|	1.0|
 |"San Jose"|	2.0|
 
+```cql
+MATCH (start:City {name: 'San Jose'}), (end:City {name: 'Mountain View'})
+CALL gds.alpha.shortestPath.stream({
+ nodeProjection: 'City',
+ relationshipProjection: {
+ connect_to: { type: 'connect_to', properties: 'distance', orientation: 'UNDIRECTED' } },
+ startNode: start, endNode: end, writeProperty: 'distance'})
+YIELD nodeId, cost
+RETURN gds.util.asNode(nodeId).name AS name, cost
+```
+
 |Name|	Cost|
 |---|---|
 |"San Jose"|	0.0|
